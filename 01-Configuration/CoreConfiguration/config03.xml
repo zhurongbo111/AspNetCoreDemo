@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Email>
+  <From>Foo@email.com</From>
+  <To>Bar@email.com</To>
+  <Server>smtp.emal.com</Server>
+  <Setting count="1">
+    <name>name1</name>
+    <value>value1</value>
+  </Setting>
+</Email>
+
