@@ -33,7 +33,8 @@ namespace CoreConfiguration
 
                 // Microsoft.Extensions.Configuration.Abstractions
                 // Microsoft.Extensions.Configuration
-                //Microsoft.Extensions.Configuration.Json
+                // Microsoft.Extensions.Configuration.FileExtensions
+                // Microsoft.Extensions.Configuration.Json
                 config.AddJsonFile("config01.json");
 
                 #region Multi-ConfigSource

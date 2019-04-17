@@ -10,4 +10,6 @@
 <div>_configuration["Email:From"]= @ViewBag.Item6</div>
 <br />
 <div>IConfigurationSection emailToConfiguration = emailConfiguration.GetSection("To");</div>
-<div>emailConfiguration.Value = @ViewBag.Item7</div>
+<div>emailToConfiguration.Value = @ViewBag.Item7</div>
+<br />
+<div>_configuration.GetSection("Type").GetSection("Assembly").GetSection("Namespace")["FullName"] = @ViewBag.Item8</div>

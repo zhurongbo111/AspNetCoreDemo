@@ -82,5 +82,11 @@ namespace CoreConfiguration.Controllers
             ViewBag.Item7 = Newtonsoft.Json.JsonConvert.SerializeObject(multiEmailOption);
             return View();
         }
+
+        public IActionResult Other()
+        {
+            ViewBag.Item1 = _configuration["TEMP"];
+            return View();
+        }
     }
 }

@@ -3,9 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreConfiguration", "CoreConfiguration\CoreConfiguration.csproj", "{DABE0466-984A-4BCC-A8A2-370DAC3E215C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreConfiguration", "CoreConfiguration\CoreConfiguration.csproj", "{DABE0466-984A-4BCC-A8A2-370DAC3E215C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceCode", "SourceCode\SourceCode.csproj", "{E7085625-4766-4AD7-83A0-72C0DA7BFEE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SourceCode", "SourceCode\SourceCode.csproj", "{E7085625-4766-4AD7-83A0-72C0DA7BFEE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UML", "UML", "{7C82ACD4-0965-4623-9885-DA3F73B26CD9}"
+	ProjectSection(SolutionItems) = preProject
+		UML\01-ConfigurationInterface-1.png = UML\01-ConfigurationInterface-1.png
+		UML\02-ConfigurationInterface-2.png = UML\02-ConfigurationInterface-2.png
+		UML\03-ConfigurationImpl.png = UML\03-ConfigurationImpl.png
+		UML\04-ConfigurationBuilderInterface.png = UML\04-ConfigurationBuilderInterface.png
+		UML\05-ConfigurationBuilderImpl.png = UML\05-ConfigurationBuilderImpl.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
