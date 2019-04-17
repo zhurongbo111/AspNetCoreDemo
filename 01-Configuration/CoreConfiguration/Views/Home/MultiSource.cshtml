@@ -1,0 +1,13 @@
+﻿
+<div>IConfigurationSection emailConfiguration = _configuration.GetSection("Email");</div>
+<div>var multiEmailOption = emailConfiguration.Get&lt;MultiEmailOption&gt;();</div>
+<div>_configuration["LogLevel"] = @ViewBag.Item1</div>
+<div>emailConfiguration["UseSSL"] = @ViewBag.Item2</div>
+<br />
+<div>_configuration["RetryCount"] = @ViewBag.Item3</div>
+<div>emailConfiguration["BodyType"] = @ViewBag.Item4</div>
+<br />
+<div>_configuration["LogType"] = @ViewBag.Item5</div>
+<div>emailConfiguration["Subject"] = @ViewBag.Item6</div>
+<br />
+<div>multiEmailOption = @ViewBag.Item7</div>

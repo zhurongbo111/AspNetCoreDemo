@@ -1,22 +1,14 @@
 {
-  "User": {
-    "Name": "Foo",
-    "Age": 26,
-    "Address": {
-      "Street": "Street1",
-      "Code": "Code1"
-    }
-  },
   "EnableCache": true,
-  "LogType": "NLog",
-  "Accounts": [
-    {
-      "Type": "type1",
-      "No": "No1"
-    },
-    {
-      "Type": "type2",
-      "No": "No2"
+  "Email": {
+    "From": "from@email.com",
+    "To": "to@email.com"
+  },
+  "Type": {
+    "Assembly": {
+      "Namespace": {
+        "FullName": "CoreConfiguration.Controllers.HomeController"
+      }
     }
-  ]
+  }
 }

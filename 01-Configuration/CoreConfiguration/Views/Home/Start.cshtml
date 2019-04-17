@@ -1,0 +1,13 @@
+﻿
+<div>_configuration["EnableCache"] = @ViewBag.Item1</div>
+<div>_configuration["Email"] = @(ViewBag.Item2 ?? "null")</div>
+<br />
+<div>IConfigurationSection emailConfiguration = _configuration.GetSection("Email");</div>
+<div>emailConfiguration["To"] = @ViewBag.Item3</div>
+<div>emailConfiguration["From"]= @ViewBag.Item4</div>
+<br />
+<div>_configuration["Email:To"]= @ViewBag.Item5</div>
+<div>_configuration["Email:From"]= @ViewBag.Item6</div>
+<br />
+<div>IConfigurationSection emailToConfiguration = emailConfiguration.GetSection("To");</div>
+<div>emailConfiguration.Value = @ViewBag.Item7</div>
