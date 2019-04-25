@@ -48,6 +48,8 @@ namespace CoreConfiguration
 
                 //Microsoft.Extensions.Configuration.Xml
                 config.AddXmlFile("config03.xml");
+
+                config.AddJsonFile("config04.json",true,true);
                 #endregion 
 
             })

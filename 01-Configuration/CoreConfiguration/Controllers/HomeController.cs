@@ -83,6 +83,12 @@ namespace CoreConfiguration.Controllers
             return View();
         }
 
+        public IActionResult Monitor()
+        {
+            ViewBag.Item1 = _configuration["Monitor"];
+            return View();
+        }
+
         public IActionResult Other()
         {
             ViewBag.Item1 = _configuration["TEMP"];
