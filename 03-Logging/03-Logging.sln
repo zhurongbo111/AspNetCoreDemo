@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreLogging", "CoreLogging\CoreLogging.csproj", "{54C829D5-2835-43C0-8A15-8E9DF7CD9739}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SorceCodes", "SorceCodes\SorceCodes.csproj", "{9DB744D7-17DD-4DD2-8900-FAF5410A4901}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54C829D5-2835-43C0-8A15-8E9DF7CD9739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C829D5-2835-43C0-8A15-8E9DF7CD9739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C829D5-2835-43C0-8A15-8E9DF7CD9739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C829D5-2835-43C0-8A15-8E9DF7CD9739}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DB744D7-17DD-4DD2-8900-FAF5410A4901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DB744D7-17DD-4DD2-8900-FAF5410A4901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DB744D7-17DD-4DD2-8900-FAF5410A4901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DB744D7-17DD-4DD2-8900-FAF5410A4901}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F78270FD-8A67-49A3-8119-58C3C95850E3}
+	EndGlobalSection
+EndGlobal
