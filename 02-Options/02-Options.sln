@@ -5,7 +5,12 @@ VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SourceCode", "SourceCode\SourceCode.csproj", "{99BA3328-E782-42F6-A94B-306CB5E9D322}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreOptions", "CoreOptions\CoreOptions.csproj", "{5D33E661-94CB-4BCA-BE83-D322EED84E2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreOptions", "CoreOptions\CoreOptions.csproj", "{5D33E661-94CB-4BCA-BE83-D322EED84E2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UML", "UML", "{097A6200-396F-46D2-B7D6-4BA64B625EDB}"
+	ProjectSection(SolutionItems) = preProject
+		CoreOptions\OptionCreator.png = CoreOptions\OptionCreator.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
