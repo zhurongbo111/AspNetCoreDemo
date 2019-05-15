@@ -7,12 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using CoreLogging.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 
 namespace CoreLogging.Controllers
 {
     public class HomeController : Controller
     {
-        public HomeController(ILogger<HomeController> loggerT, ILoggerFactory loggerFactory, ILoggerProvider loggerProviders)
+        public HomeController(ILogger<HomeController> loggerT, ILoggerFactory loggerFactory, ILoggerProvider loggerProviders, IOptionsMonitor<LoggerFilterOptions> filter)
         {
             loggerFactory.AddLog4Net();
             var log = loggerFactory.CreateLogger("Test");
