@@ -5,11 +5,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CoreLogging.Models;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace CoreLogging.Controllers
 {
     public class HomeController : Controller
     {
+        public HomeController(ILogger<HomeController> loggerT, ILoggerFactory loggerFactory, ILoggerProvider loggerProviders)
+        {
+            loggerFactory.AddLog4Net();
+            var log = loggerFactory.CreateLogger("Test");
+        }
         public IActionResult Index()
         {
             return View();

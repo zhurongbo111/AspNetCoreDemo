@@ -19,6 +19,9 @@ namespace CoreLogging
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+            .ConfigureLogging(loggerBuilder => {
+                //loggerBuilder.ClearProviders
+            })
                 .UseStartup<Startup>();
     }
 }
