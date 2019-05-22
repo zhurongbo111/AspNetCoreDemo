@@ -20,7 +20,11 @@ namespace CoreLogging
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
             .ConfigureLogging(loggerBuilder => {
-                //loggerBuilder.ClearProviders
+                //loggerBuilder.AddLog4Net();
+                //loggerBuilder.AddFilter((provider, category, loglevel) =>
+                //{
+                //    return false;
+                //});
             })
                 .UseStartup<Startup>();
     }

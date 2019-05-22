@@ -8,15 +8,36 @@ using CoreLogging.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Logging.Configuration;
+using Microsoft.Extensions.Logging.Console;
 
 namespace CoreLogging.Controllers
 {
     public class HomeController : Controller
     {
-        public HomeController(ILogger<HomeController> loggerT, ILoggerFactory loggerFactory, ILoggerProvider loggerProviders, IOptionsMonitor<LoggerFilterOptions> filter)
+        public HomeController(ILogger<HomeController> loggerT, ILoggerFactory loggerFactory,
+            ILoggerProvider loggerProviders, IOptionsMonitor<LoggerFilterOptions> filter,
+            ILoggerProviderConfigurationFactory loggerProviderConfigurationFactory, ILoggerProviderConfiguration<ConsoleLoggerProvider> loggerProviderConfiguration)
         {
-            loggerFactory.AddLog4Net();
-            var log = loggerFactory.CreateLogger("Test");
+            var testLog = loggerFactory.CreateLogger("Test");
+            loggerT.LogTrace("HomeController: Trace");
+            loggerT.LogDebug("HomeController: Debug");
+            loggerT.LogInformation("HomeController: Info");
+            loggerT.LogWarning("HomeController: Warning");
+            loggerT.LogError("HomeController: Error");
+            loggerT.LogCritical("HomeController: Critical");
+
+            testLog.LogTrace("Test: Trace");
+            testLog.LogDebug("Test: Debug");
+            testLog.LogInformation("Test: Info");
+            testLog.LogWarning("Test: Warning");
+            testLog.LogError("Test: Error");
+            testLog.LogCritical("Test: Critical");
+
+            using (var scope = loggerT.BeginScope(filter))
+            {
+                loggerT.LogError("Scope Error");
+            }
         }
         public IActionResult Index()
         {
