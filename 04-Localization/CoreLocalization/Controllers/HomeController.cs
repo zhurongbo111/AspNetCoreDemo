@@ -16,11 +16,12 @@ namespace CoreLocalization.Controllers
     public class HomeController : Controller
     {
         private readonly IStringLocalizer<HomeController> _localizer;
+        private readonly AllStringLocalizer _allStringLocalizer;
 
-        public HomeController(IStringLocalizer<HomeController> localizer)
+        public HomeController(IStringLocalizer<HomeController> localizer, AllStringLocalizer allStringLocalizer )
         {
             _localizer = localizer;
-            
+            _allStringLocalizer = allStringLocalizer;
         }
 
         public IActionResult Index()
@@ -28,22 +29,29 @@ namespace CoreLocalization.Controllers
             var cultureFeature = HttpContext.Features.Get<IRequestCultureFeature>();
             var word = _localizer.GetString("Hello");
 
+            word = _allStringLocalizer.GetString("TestKey");
+
             var zhLocalizer = _localizer.WithCulture(new System.Globalization.CultureInfo("zh-CN"));
             var enLocalizer = _localizer.WithCulture(new System.Globalization.CultureInfo("en-US"));
             word = zhLocalizer.GetString("Hello");
             word = enLocalizer.GetString("Hello");
             word = _localizer.GetString("Hello");
 
+            word = _allStringLocalizer.GetString("TestKey");
+
             System.Globalization.CultureInfo.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
             word = zhLocalizer.GetString("Hello");
             word = enLocalizer.GetString("Hello");
             word = _localizer.GetString("Hello");
+
+            word = _allStringLocalizer.GetString("TestKey");
 
             System.Globalization.CultureInfo.CurrentUICulture = new System.Globalization.CultureInfo("zh-CN");
             word = zhLocalizer.GetString("Hello");
             word = enLocalizer.GetString("Hello");
             word = _localizer.GetString("Hello");
 
+            word = _allStringLocalizer.GetString("TestKey");
             return View();
         }
 

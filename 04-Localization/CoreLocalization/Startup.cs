@@ -31,6 +31,8 @@ namespace CoreLocalization
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddTransient<AllStringLocalizer>();
+
             services.AddLocalization(localizationOption => {
                 localizationOption.ResourcesPath = "MyResources";
             });
