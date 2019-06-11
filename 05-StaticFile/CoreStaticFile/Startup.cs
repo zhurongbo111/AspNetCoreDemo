@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 
 namespace CoreStaticFile
 {
@@ -46,7 +47,10 @@ namespace CoreStaticFile
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions());
+            app.UseStaticFiles(new StaticFileOptions() { ServeUnknownFileTypes = true, FileProvider = new PhysicalFileProvider(System.IO.Path.Combine(env.ContentRootPath, "Logs")), DefaultContentType = "text/plain", RequestPath="/Logs"});
+            
+            app.UseDirectoryBrowser(new DirectoryBrowserOptions() { FileProvider = new PhysicalFileProvider(System.IO.Path.Combine(env.ContentRootPath,"Logs")), RequestPath="/Logs" });
             app.UseCookiePolicy();
 
             app.UseMvc(routes =>
