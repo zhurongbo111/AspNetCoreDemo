@@ -5,7 +5,7 @@ using System;
 
 namespace Microsoft.Extensions.Logging
 {
-    internal static partial class LoggingExtensions
+    internal static partial class LoggingExtensions2
     {
         private static readonly Action<ILogger, string, Exception> _authenticationSchemeAuthenticated;
         private static readonly Action<ILogger, string, Exception> _authenticationSchemeNotAuthenticated;
@@ -22,7 +22,7 @@ namespace Microsoft.Extensions.Logging
         private static readonly Action<ILogger, Exception> _accessDeniedContextHandled;
         private static readonly Action<ILogger, Exception> _accessDeniedContextSkipped;
 
-        static LoggingExtensions()
+        static LoggingExtensions2()
         {
             _remoteAuthenticationError = LoggerMessage.Define<string>(
                 eventId: new EventId(4, "RemoteAuthenticationFailed"),

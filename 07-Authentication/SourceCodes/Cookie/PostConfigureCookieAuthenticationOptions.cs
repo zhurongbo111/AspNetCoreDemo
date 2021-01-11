@@ -40,7 +40,7 @@ namespace Microsoft.AspNetCore.Authentication.Cookies
             }
             if (options.CookieManager == null)
             {
-                options.CookieManager = new ChunkingCookieManager();
+                //options.CookieManager = new ChunkingCookieManager();
             }
             if (!options.LoginPath.HasValue)
             {
